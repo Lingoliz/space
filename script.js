@@ -66,3 +66,19 @@ teckdots.forEach((e,i)=> {
         techImage.src = `${e.dataset.src}`
     })
 })
+
+let burger = document.querySelector('.burger');
+let nav = document.querySelector('nav ul');
+
+document.addEventListener('click',(target)=> {
+    console.log(target.target.className);
+    if (target.target.className == 'burger')
+    {
+        nav.classList.add('active');
+        
+    }
+    else {
+        nav.classList.remove('active');
+
+    }
+})

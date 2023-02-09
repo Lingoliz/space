@@ -24,6 +24,9 @@ nav {
     left: 0;
     padding: 20px 0 20px 40px;
 }
+
+
+
 .logo {
     width: 50px;
 }
@@ -46,7 +49,19 @@ nav ul {
     -o-border-radius:5px 0 0 5px;
     position: relative;
     flex: 1;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
 }
+
+
+
+nav ul.active  {
+    left: 0;
+}
+
 nav a {
     text-decoration: none;
     color: #dfdfdf;
@@ -511,8 +526,21 @@ h2.title span {
     header {
         background-image: url('/assets/home/background-home-mobile.jpg');
     }
-     nav ul {
-        display: none;
+    nav ul {
+        flex-direction: column;
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100vh;
+        background: #000;
+        z-index: 1000;
+        justify-content: center;
+        width: 50%;
+        max-width: 400px;
+        left: -400px;
+    }
+    nav ul li::after {
+       display: none;
     }
     nav {
         padding: 10px 20px;
