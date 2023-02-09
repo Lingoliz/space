@@ -1,0 +1,560 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    min-height: 100vh;
+    background: url('/assets/home/background-home-desktop.jpg') no-repeat center;
+    background-size: cover;
+    display: flex;
+    
+    position: relative;
+}
+nav {
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    left: 0;
+    padding: 20px 0 20px 40px;
+}
+.logo {
+    width: 50px;
+}
+.burger {
+    display: none;
+}
+nav ul {
+    display: flex;
+    gap: 10px;
+    list-style-type: none;
+    background: rgba(255,255,255,0.06);
+    backdrop-filter: blur(5px);
+    align-self: stretch;
+    align-items: center;
+    padding: 20px  40px;
+    border-radius:5px 0 0 5px;
+    -webkit-border-radius:5px 0 0 5px;
+    -moz-border-radius:5px 0 0 5px;
+    -ms-border-radius:5px 0 0 5px;
+    -o-border-radius:5px 0 0 5px;
+    position: relative;
+    flex: 1;
+}
+nav a {
+    text-decoration: none;
+    color: #dfdfdf;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+nav span {
+    font-weight: 700;
+    color: #fff;
+    font-size: 0.9rem;
+    margin-right: 2px;
+}
+hr  {
+    position: relative;
+    z-index: 100;
+    width: 100%;
+    right: -25px;
+    height: 1px;
+    background: #dfdfdf;
+    opacity: 0.4;
+    flex: 1;
+}
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    
+}
+
+
+header .content {
+    display: flex;
+    align-items: flex-end;
+    color: #fff;
+    justify-content: space-between;
+    gap: 50px;
+    position: relative;
+    top: 90px;
+}
+header .content .col-1 h3 {
+    opacity: 0.8;
+    font-weight: 400;
+
+}
+h1.title {
+    font-size: 6.8rem;
+    text-transform: uppercase;
+    font-weight: 200;
+    line-height: 110%;
+} 
+header p {
+    opacity: 0.8;
+    font-weight: 200;
+    max-width: 400px;
+    line-height: 28px;
+}
+header .content span {
+    background: #fff;
+    
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    color: #000;
+    font-size: 1.3rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    
+}
+nav ul li {
+    position: relative;
+    display: flex;
+    
+}
+nav ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -20px;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+nav ul li:hover::after ,
+ul li.active::after{
+    width: 100%;
+}
+
+
+
+/*#######################################*/ 
+
+.destination {
+    min-height: 100vh;
+    background: url('/assets/destination/background-destination-desktop.jpg') no-repeat center;
+    background-size: cover;   
+    display: flex;
+    color: #fff;
+    
+}
+
+.destination .content {
+    
+    display: flex;
+    width: 100%;
+    
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 0;
+}
+h2.title {
+    
+    color: #fff;
+    font-weight: 200;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    letter-spacing: 2px;
+    margin-top: 100px;
+    margin-bottom: 40px;
+}
+h2.title span {
+    opacity: 0.5;
+    font-weight: 600;
+    margin-right: 8px;
+}
+
+.destination p {
+    max-width: 400px;
+}
+.destination .content img {
+    width: 100%;
+    max-width: 300px;
+    animation: animate 2s ;
+    -webkit-animation: animate 2s ;
+}
+.destination .content ul  {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin-bottom: 20px;
+    
+}
+.destination .content li {
+    opacity: 0.6;
+    cursor: pointer;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    position: relative;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+.destination .content li::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0.3s;
+    bottom: -7px;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+.destination .content .text .description> p {
+    margin-top: 20px;
+    opacity: 0.6;
+    font-weight: 300;
+    border-bottom: solid 1px #dfdfdf7c;
+    padding-bottom: 30px;
+}
+.destination .content li.active {
+    opacity: 1;
+}
+.destination .content li.active::after {
+    width: 100%;
+}
+.destination .description .info {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+}
+.destination .description .info p {
+     opacity: 0.6;
+     margin-bottom: 5px;
+     font-weight: 200;
+}
+.destination .description .info h4 {
+    font-weight: 300;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.destination .description {
+    display: none;
+}
+.destination .description.active {
+    display: block;
+}
+
+
+/*############################################*/
+
+.crew {
+    background: url('/assets/crew/background-crew-desktop.jpg') center no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    
+    display: flex;
+    color: #fff;
+}
+.crew .content {
+    display: flex;
+    margin-top: 80px;
+    gap: 100px;
+    
+    
+    width: 100%;
+    align-items: center;
+   
+}
+.crew p {
+    max-width: 400px;
+    opacity: 0.7;
+    font-weight: 300;
+}
+
+.crew h3 {
+    font-weight: 300;
+    font-size: 1.6rem;
+    opacity: 0.6;
+}
+.crew h1 {
+    font-size: 3rem;
+    font-weight: 300;
+    
+}
+.crew .title {
+    position: relative;
+    top: 50px;
+}
+
+.crew .dots {
+    display: flex;
+    gap: 15px;
+    
+}
+.crew .dots span {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #fff;
+    margin-top: 50px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    opacity: 0.3;
+    cursor: pointer;
+}
+.crew .dots span.active {
+    opacity: 1;
+}
+.crew {
+    overflow: hidden;
+}
+.crew .content img {
+    width: 100%;
+    max-width: 450px;
+}
+.crew .show {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+
+}
+.crew .show.active {
+    display: flex;
+}
+/*##############################################*/
+
+.technology {
+    min-height: 100vh;
+    background: url('/assets/technology/background-technology-desktop.jpg') no-repeat center;
+    background-size: cover;
+    display: flex;
+    color: #fff;
+}
+
+.technology .content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    justify-content: space-between;
+    
+}
+
+.technology .slider  {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    
+}
+.technology .slider span {
+    border: 1px solid #dfdfdf7c;
+    color: #dfdfdf7c;
+    display: inline-block;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+.technology span.active {
+    background: #fff;
+    color: #000;   
+}
+.technology .text {
+    display: none;
+    flex-direction: column;
+    gap: 18px;
+}
+.technology .text.active {
+    display: block;
+}
+
+.technology .title {
+    position: relative;
+    top: 50px;
+}
+
+.technology .content h3 {
+    opacity: 0.7;
+    font-weight: 300;
+    font-size: 1.6rem;
+}
+.technology .content h1 {
+    font-size: 2.4rem;
+    font-weight: 500;
+    margin: 10px 0;
+}
+.technology .content p {
+    opacity: 0.6;
+    font-weight: 300;
+    line-height: 28px;
+}
+.technology .content img {
+    width: 100%;
+    max-width: 450px;
+    height: 100%;
+}
+
+/*##############################################*/
+@media (max-width:1023px) {
+     hr {
+        display: none;
+    }
+
+    nav {
+        padding-top: 0;
+        
+    }
+     nav ul {
+        flex: 0;
+        gap: 25px;
+        margin-left: auto;
+    }
+     nav span {
+        display: none;
+    }
+    header .content ,
+    .destination .content ,
+    .crew .content{
+       text-align: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    } 
+    header {
+        background-image: url('/assets/home/background-home-tablet.jpg');
+    }
+    .destination .content ul {
+        justify-content: center;
+        
+    }
+    .destination {
+        background: url('/assets/destination/background-destination-tablet.jpg') center no-repeat;
+        background-size: cover;
+        
+    }
+   .crew .dots {
+    justify-content: center;
+    margin-top: 0px;
+   }
+   .crew .content {
+    gap: 30px;
+    
+   }
+   .crew {
+    background-image: url('/assets/crew/background-crew-tablet.jpg');
+   }
+   .technology .content {
+    flex-direction: column;
+    margin-top: 50px;
+    padding: 50px 0;
+   }
+   .technology .content img {
+    order: 1;
+   }
+   .technology .slider {
+    order: 2;
+    flex-direction: row;
+   }
+   .technology .text {
+    order: 3;
+    text-align: center;
+   }
+
+}
+
+@media (max-width:767px) {
+    header {
+        background-image: url('/assets/home/background-home-mobile.jpg');
+    }
+     nav ul {
+        display: none;
+    }
+    nav {
+        padding: 10px 20px;
+    }
+    .burger {
+        display: block;
+    }
+    h1.title {
+        font-size: 4rem;
+    }
+    .destination {
+        background-image: url('/assets/destination/background-destination-tablet.jpg') center no-repeat;
+        background-size: cover;;
+    }
+    .destination .content .info {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .crew .content {
+        gap: 0;
+        padding: 15px 0;
+    }
+    .crew .text {
+        order: 2;
+    }
+    .crew img {
+        order: 1;
+    }
+    .crew .text h1{
+        order: 2;
+    }
+    .crew .text h3{
+        order: 2;
+    }
+    .crew .text p{
+        order: 2;
+    }
+    .crew .dots {
+        order: 0;
+        margin-bottom: 15px;
+    }
+    .crew {
+        background-image: url('/assets/crew/background-crew-mobile.jpg');
+    }
+}
